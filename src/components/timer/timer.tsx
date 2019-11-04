@@ -1,21 +1,9 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 
+import { IProps, IState } from './interface'
+
 import './timer.scss'
-
-interface IProps {
-  startTime: number,
-  endTime: number,
-  onTimeup?(): void,
-  onTick?(leftTime: number): void
-}
-
-interface IState {
-  diffTime: number,
-  remainHour: number,
-  remainMin: number,
-  remainSec: number
-}
 
 export default class Timer extends Component<IProps, IState> {
 
